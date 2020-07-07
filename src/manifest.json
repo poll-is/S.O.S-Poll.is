@@ -1,0 +1,13 @@
+{
+  "name": "sos-pollis",
+  "short_name": "sos-pollis",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/icon/favicon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }],
+  "background_color": "#488aff",
+  "theme_color": "#488aff"
+}
