@@ -12,6 +12,8 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+LICENSE
+readme.md
 .stencil/
 .idea/
 .vscode/
