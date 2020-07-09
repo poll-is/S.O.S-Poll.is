@@ -1,3 +1,9 @@
 :host {
   display: block;
 }
+
+ion-select {
+  color: #545ca7;
+  --placeholder-color: #971e49;
+  --placeholder-opacity: 1;
+}
