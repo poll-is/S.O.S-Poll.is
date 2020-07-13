@@ -16,11 +16,12 @@ export class AppMenu {
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-item>Meu perfil</ion-item>
-            <ion-item>Minhas escolas</ion-item>
-            <ion-item>Meus equipamentos</ion-item>
-            <ion-item>Minhas contribuições</ion-item>
-            <ion-item>Configurações</ion-item>
+            <ion-item href="/profile/:name">Meu perfil</ion-item>
+            <ion-item href="/my-school">Minhas escolas</ion-item>
+            <ion-item href="/my-device">Meus equipamentos</ion-item>
+            <ion-item href="/my-contribution">Minhas contribuições</ion-item>
+            <ion-item href="/setup">Configurações</ion-item>
+            <ion-item href="/login">Sair</ion-item>
           </ion-list>
         </ion-content>
       </ion-menu>,
