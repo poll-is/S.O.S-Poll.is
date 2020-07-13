@@ -1,13 +1,20 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.css'
+  tag: 'page-home',
+  styleUrl: 'page-home.css'
 })
-export class AppHome {
+export class PageHome {
 
   render() {
     return [
+      // insert header
+      <app-header></app-header>,
+      
+      // insert menu
+      <app-menu></app-menu>,
+
+      // insert content
       <ion-content id="main">
         <ion-item-divider>
           <ion-text>

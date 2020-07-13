@@ -8,7 +8,11 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppDonor {
     }
+    interface AppHeader {
+    }
     interface AppHome {
+    }
+    interface AppMenu {
     }
     interface AppProfile {
         "name": string;
@@ -21,6 +25,8 @@ export namespace Components {
     }
     interface AppVoluntary {
     }
+    interface PageHome {
+    }
 }
 declare global {
     interface HTMLAppDonorElement extends Components.AppDonor, HTMLStencilElement {
@@ -29,11 +35,23 @@ declare global {
         prototype: HTMLAppDonorElement;
         new (): HTMLAppDonorElement;
     };
+    interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {
+    }
+    var HTMLAppHeaderElement: {
+        prototype: HTMLAppHeaderElement;
+        new (): HTMLAppHeaderElement;
+    };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
     var HTMLAppHomeElement: {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppMenuElement extends Components.AppMenu, HTMLStencilElement {
+    }
+    var HTMLAppMenuElement: {
+        prototype: HTMLAppMenuElement;
+        new (): HTMLAppMenuElement;
     };
     interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
     }
@@ -65,20 +83,33 @@ declare global {
         prototype: HTMLAppVoluntaryElement;
         new (): HTMLAppVoluntaryElement;
     };
+    interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
+    }
+    var HTMLPageHomeElement: {
+        prototype: HTMLPageHomeElement;
+        new (): HTMLPageHomeElement;
+    };
     interface HTMLElementTagNameMap {
         "app-donor": HTMLAppDonorElement;
+        "app-header": HTMLAppHeaderElement;
         "app-home": HTMLAppHomeElement;
+        "app-menu": HTMLAppMenuElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "app-school": HTMLAppSchoolElement;
         "app-student": HTMLAppStudentElement;
         "app-voluntary": HTMLAppVoluntaryElement;
+        "page-home": HTMLPageHomeElement;
     }
 }
 declare namespace LocalJSX {
     interface AppDonor {
     }
+    interface AppHeader {
+    }
     interface AppHome {
+    }
+    interface AppMenu {
     }
     interface AppProfile {
         "name"?: string;
@@ -91,14 +122,19 @@ declare namespace LocalJSX {
     }
     interface AppVoluntary {
     }
+    interface PageHome {
+    }
     interface IntrinsicElements {
         "app-donor": AppDonor;
+        "app-header": AppHeader;
         "app-home": AppHome;
+        "app-menu": AppMenu;
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "app-school": AppSchool;
         "app-student": AppStudent;
         "app-voluntary": AppVoluntary;
+        "page-home": PageHome;
     }
 }
 export { LocalJSX as JSX };
@@ -106,12 +142,15 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-donor": LocalJSX.AppDonor & JSXBase.HTMLAttributes<HTMLAppDonorElement>;
+            "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "app-school": LocalJSX.AppSchool & JSXBase.HTMLAttributes<HTMLAppSchoolElement>;
             "app-student": LocalJSX.AppStudent & JSXBase.HTMLAttributes<HTMLAppStudentElement>;
             "app-voluntary": LocalJSX.AppVoluntary & JSXBase.HTMLAttributes<HTMLAppVoluntaryElement>;
+            "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
         }
     }
 }
