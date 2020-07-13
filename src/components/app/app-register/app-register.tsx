@@ -37,7 +37,7 @@ export class AppRegister {
           <ion-col size="12">
             <ion-item>
               <ion-label>Qual o seu perfil?</ion-label>
-              <ion-select value="" required placeholder="Selecione o perfil">
+              <ion-select value="" placeholder="Selecione o perfil">
                 <ion-select-option value="Doador">Doador</ion-select-option>
                 <ion-select-option value="Estudante">Estudante</ion-select-option>
                 <ion-select-option value="Voluntário">Voluntário</ion-select-option>
