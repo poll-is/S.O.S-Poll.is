@@ -139,7 +139,7 @@ export class AppRegister {
         </ion-row>
         <ion-row>
           <ion-col size="8" offset="2">
-            <ion-button href="#" color="medium" expand="block">Criar conta</ion-button>
+            <ion-button href="#" color="primary" expand="block">Criar conta</ion-button>
           </ion-col>
         </ion-row>
         <hr/>
