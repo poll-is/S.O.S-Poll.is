@@ -6,11 +6,15 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppDevice {
+    }
     interface AppDonor {
     }
     interface AppHeader {
     }
     interface AppHome {
+    }
+    interface AppLocation {
     }
     interface AppLogin {
     }
@@ -19,9 +23,15 @@ export namespace Components {
     interface AppProfile {
         "name": string;
     }
+    interface AppRegister {
+    }
     interface AppRoot {
     }
     interface AppSchool {
+    }
+    interface AppSchoolList {
+    }
+    interface AppSchoolRegister {
     }
     interface AppStudent {
     }
@@ -31,6 +41,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppDeviceElement extends Components.AppDevice, HTMLStencilElement {
+    }
+    var HTMLAppDeviceElement: {
+        prototype: HTMLAppDeviceElement;
+        new (): HTMLAppDeviceElement;
+    };
     interface HTMLAppDonorElement extends Components.AppDonor, HTMLStencilElement {
     }
     var HTMLAppDonorElement: {
@@ -48,6 +64,12 @@ declare global {
     var HTMLAppHomeElement: {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppLocationElement extends Components.AppLocation, HTMLStencilElement {
+    }
+    var HTMLAppLocationElement: {
+        prototype: HTMLAppLocationElement;
+        new (): HTMLAppLocationElement;
     };
     interface HTMLAppLoginElement extends Components.AppLogin, HTMLStencilElement {
     }
@@ -67,6 +89,12 @@ declare global {
         prototype: HTMLAppProfileElement;
         new (): HTMLAppProfileElement;
     };
+    interface HTMLAppRegisterElement extends Components.AppRegister, HTMLStencilElement {
+    }
+    var HTMLAppRegisterElement: {
+        prototype: HTMLAppRegisterElement;
+        new (): HTMLAppRegisterElement;
+    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
@@ -78,6 +106,18 @@ declare global {
     var HTMLAppSchoolElement: {
         prototype: HTMLAppSchoolElement;
         new (): HTMLAppSchoolElement;
+    };
+    interface HTMLAppSchoolListElement extends Components.AppSchoolList, HTMLStencilElement {
+    }
+    var HTMLAppSchoolListElement: {
+        prototype: HTMLAppSchoolListElement;
+        new (): HTMLAppSchoolListElement;
+    };
+    interface HTMLAppSchoolRegisterElement extends Components.AppSchoolRegister, HTMLStencilElement {
+    }
+    var HTMLAppSchoolRegisterElement: {
+        prototype: HTMLAppSchoolRegisterElement;
+        new (): HTMLAppSchoolRegisterElement;
     };
     interface HTMLAppStudentElement extends Components.AppStudent, HTMLStencilElement {
     }
@@ -98,25 +138,34 @@ declare global {
         new (): HTMLPageHomeElement;
     };
     interface HTMLElementTagNameMap {
+        "app-device": HTMLAppDeviceElement;
         "app-donor": HTMLAppDonorElement;
         "app-header": HTMLAppHeaderElement;
         "app-home": HTMLAppHomeElement;
+        "app-location": HTMLAppLocationElement;
         "app-login": HTMLAppLoginElement;
         "app-menu": HTMLAppMenuElement;
         "app-profile": HTMLAppProfileElement;
+        "app-register": HTMLAppRegisterElement;
         "app-root": HTMLAppRootElement;
         "app-school": HTMLAppSchoolElement;
+        "app-school-list": HTMLAppSchoolListElement;
+        "app-school-register": HTMLAppSchoolRegisterElement;
         "app-student": HTMLAppStudentElement;
         "app-voluntary": HTMLAppVoluntaryElement;
         "page-home": HTMLPageHomeElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppDevice {
+    }
     interface AppDonor {
     }
     interface AppHeader {
     }
     interface AppHome {
+    }
+    interface AppLocation {
     }
     interface AppLogin {
     }
@@ -125,9 +174,15 @@ declare namespace LocalJSX {
     interface AppProfile {
         "name"?: string;
     }
+    interface AppRegister {
+    }
     interface AppRoot {
     }
     interface AppSchool {
+    }
+    interface AppSchoolList {
+    }
+    interface AppSchoolRegister {
     }
     interface AppStudent {
     }
@@ -136,14 +191,19 @@ declare namespace LocalJSX {
     interface PageHome {
     }
     interface IntrinsicElements {
+        "app-device": AppDevice;
         "app-donor": AppDonor;
         "app-header": AppHeader;
         "app-home": AppHome;
+        "app-location": AppLocation;
         "app-login": AppLogin;
         "app-menu": AppMenu;
         "app-profile": AppProfile;
+        "app-register": AppRegister;
         "app-root": AppRoot;
         "app-school": AppSchool;
+        "app-school-list": AppSchoolList;
+        "app-school-register": AppSchoolRegister;
         "app-student": AppStudent;
         "app-voluntary": AppVoluntary;
         "page-home": PageHome;
@@ -153,14 +213,19 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-device": LocalJSX.AppDevice & JSXBase.HTMLAttributes<HTMLAppDeviceElement>;
             "app-donor": LocalJSX.AppDonor & JSXBase.HTMLAttributes<HTMLAppDonorElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-location": LocalJSX.AppLocation & JSXBase.HTMLAttributes<HTMLAppLocationElement>;
             "app-login": LocalJSX.AppLogin & JSXBase.HTMLAttributes<HTMLAppLoginElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
+            "app-register": LocalJSX.AppRegister & JSXBase.HTMLAttributes<HTMLAppRegisterElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "app-school": LocalJSX.AppSchool & JSXBase.HTMLAttributes<HTMLAppSchoolElement>;
+            "app-school-list": LocalJSX.AppSchoolList & JSXBase.HTMLAttributes<HTMLAppSchoolListElement>;
+            "app-school-register": LocalJSX.AppSchoolRegister & JSXBase.HTMLAttributes<HTMLAppSchoolRegisterElement>;
             "app-student": LocalJSX.AppStudent & JSXBase.HTMLAttributes<HTMLAppStudentElement>;
             "app-voluntary": LocalJSX.AppVoluntary & JSXBase.HTMLAttributes<HTMLAppVoluntaryElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;

@@ -22,6 +22,7 @@ export class AppMenu {
             <ion-item href="/my-contribution">Minhas contribuições</ion-item>
             <ion-item href="/setup">Configurações</ion-item>
             <ion-item href="/login">Sair</ion-item>
+            <ion-item href="/register">Criar conta</ion-item>
           </ion-list>
         </ion-content>
       </ion-menu>,
