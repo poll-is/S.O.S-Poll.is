@@ -116,7 +116,7 @@ export class AppRegister {
 
           <ion-col size="12">
             <ion-item>
-              <ion-label position="stacked">E-mail: <ion-text color="danger">*</ion-text></ion-label>
+              <ion-label position="floating">E-mail: <ion-text color="danger">*</ion-text></ion-label>
               <ion-input
                 type="email"
                 name="email"
@@ -127,7 +127,7 @@ export class AppRegister {
 
           <ion-col size="12">
             <ion-item>
-              <ion-label position="stacked">Senha: <ion-text color="danger">*</ion-text></ion-label>
+              <ion-label position="floating">Senha: <ion-text color="danger">*</ion-text></ion-label>
               <ion-input
                 type="password"
                 name="password"
