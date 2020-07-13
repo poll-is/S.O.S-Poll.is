@@ -25,10 +25,7 @@ export class AppRegister {
   }
 
   render() {
-    return [
-      // insert header
-      <app-header></app-header>,
-      
+    return [    
       <ion-grid>
         <ion-row>
           <ion-col size="12" class="ion-padding">
