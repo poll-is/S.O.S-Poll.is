@@ -16,7 +16,7 @@ export class AppLogin {
           </ion-col>
           <ion-col size="12">
             <ion-item>
-              <ion-label position="stacked">E-mail:</ion-label>
+              <ion-label position="floating">E-mail:</ion-label>
               <ion-input
                 type="email"
                 name="email"
@@ -25,7 +25,7 @@ export class AppLogin {
           </ion-col>
           <ion-col size="12">
             <ion-item>
-              <ion-label position="stacked">Senha:</ion-label>
+              <ion-label position="floating">Senha:</ion-label>
               <ion-input
                 type="password"
                 name="password"
