@@ -18,6 +18,14 @@ export class AppStudent {
       </ion-header>,
 
       <ion-content fullscreen>
+      <ion-item-divider>
+        <ion-text>
+          <h3>Cadastro de estudante:</h3>
+          <p>Um texto explicativo aqui.</p>
+        </ion-text>
+      </ion-item-divider>
+
+      <app-register></app-register>
 
       </ion-content>,
     ];

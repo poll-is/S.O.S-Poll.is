@@ -21,15 +21,9 @@ export class AppVoluntary {
         <ion-item-divider>
           <ion-text>
             <h3>Cadastro de voluntário:</h3>
+            <p>Um texto explicativo aqui.</p>
           </ion-text>
         </ion-item-divider>
-        <ion-grid>
-          <ion-row>
-            <ion-col class="ion-padding">
-              <p>Um texto explicativo aqui.</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
         
         <app-register></app-register>
 

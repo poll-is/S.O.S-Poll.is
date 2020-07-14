@@ -30,7 +30,7 @@ export class AppRegister {
         <ion-row>
           <ion-col size="12" class="ion-padding">
             <ion-item-divider class="ion-no-padding">
-              <h3 class="ion-text-center">Criar conta</h3>
+              <h4 class="ion-text-center">Criar conta</h4>
             </ion-item-divider>
           </ion-col>
 
