@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppDevice {
+    interface AppDeviceList {
+    }
+    interface AppDeviceRegister {
     }
     interface AppDonor {
     }
@@ -14,7 +16,9 @@ export namespace Components {
     }
     interface AppHome {
     }
-    interface AppLocation {
+    interface AppLocationList {
+    }
+    interface AppLocationRegister {
     }
     interface AppLogin {
     }
@@ -41,11 +45,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLAppDeviceElement extends Components.AppDevice, HTMLStencilElement {
+    interface HTMLAppDeviceListElement extends Components.AppDeviceList, HTMLStencilElement {
     }
-    var HTMLAppDeviceElement: {
-        prototype: HTMLAppDeviceElement;
-        new (): HTMLAppDeviceElement;
+    var HTMLAppDeviceListElement: {
+        prototype: HTMLAppDeviceListElement;
+        new (): HTMLAppDeviceListElement;
+    };
+    interface HTMLAppDeviceRegisterElement extends Components.AppDeviceRegister, HTMLStencilElement {
+    }
+    var HTMLAppDeviceRegisterElement: {
+        prototype: HTMLAppDeviceRegisterElement;
+        new (): HTMLAppDeviceRegisterElement;
     };
     interface HTMLAppDonorElement extends Components.AppDonor, HTMLStencilElement {
     }
@@ -65,11 +75,17 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppLocationElement extends Components.AppLocation, HTMLStencilElement {
+    interface HTMLAppLocationListElement extends Components.AppLocationList, HTMLStencilElement {
     }
-    var HTMLAppLocationElement: {
-        prototype: HTMLAppLocationElement;
-        new (): HTMLAppLocationElement;
+    var HTMLAppLocationListElement: {
+        prototype: HTMLAppLocationListElement;
+        new (): HTMLAppLocationListElement;
+    };
+    interface HTMLAppLocationRegisterElement extends Components.AppLocationRegister, HTMLStencilElement {
+    }
+    var HTMLAppLocationRegisterElement: {
+        prototype: HTMLAppLocationRegisterElement;
+        new (): HTMLAppLocationRegisterElement;
     };
     interface HTMLAppLoginElement extends Components.AppLogin, HTMLStencilElement {
     }
@@ -138,11 +154,13 @@ declare global {
         new (): HTMLPageHomeElement;
     };
     interface HTMLElementTagNameMap {
-        "app-device": HTMLAppDeviceElement;
+        "app-device-list": HTMLAppDeviceListElement;
+        "app-device-register": HTMLAppDeviceRegisterElement;
         "app-donor": HTMLAppDonorElement;
         "app-header": HTMLAppHeaderElement;
         "app-home": HTMLAppHomeElement;
-        "app-location": HTMLAppLocationElement;
+        "app-location-list": HTMLAppLocationListElement;
+        "app-location-register": HTMLAppLocationRegisterElement;
         "app-login": HTMLAppLoginElement;
         "app-menu": HTMLAppMenuElement;
         "app-profile": HTMLAppProfileElement;
@@ -157,7 +175,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface AppDevice {
+    interface AppDeviceList {
+    }
+    interface AppDeviceRegister {
     }
     interface AppDonor {
     }
@@ -165,7 +185,9 @@ declare namespace LocalJSX {
     }
     interface AppHome {
     }
-    interface AppLocation {
+    interface AppLocationList {
+    }
+    interface AppLocationRegister {
     }
     interface AppLogin {
     }
@@ -191,11 +213,13 @@ declare namespace LocalJSX {
     interface PageHome {
     }
     interface IntrinsicElements {
-        "app-device": AppDevice;
+        "app-device-list": AppDeviceList;
+        "app-device-register": AppDeviceRegister;
         "app-donor": AppDonor;
         "app-header": AppHeader;
         "app-home": AppHome;
-        "app-location": AppLocation;
+        "app-location-list": AppLocationList;
+        "app-location-register": AppLocationRegister;
         "app-login": AppLogin;
         "app-menu": AppMenu;
         "app-profile": AppProfile;
@@ -213,11 +237,13 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-device": LocalJSX.AppDevice & JSXBase.HTMLAttributes<HTMLAppDeviceElement>;
+            "app-device-list": LocalJSX.AppDeviceList & JSXBase.HTMLAttributes<HTMLAppDeviceListElement>;
+            "app-device-register": LocalJSX.AppDeviceRegister & JSXBase.HTMLAttributes<HTMLAppDeviceRegisterElement>;
             "app-donor": LocalJSX.AppDonor & JSXBase.HTMLAttributes<HTMLAppDonorElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-location": LocalJSX.AppLocation & JSXBase.HTMLAttributes<HTMLAppLocationElement>;
+            "app-location-list": LocalJSX.AppLocationList & JSXBase.HTMLAttributes<HTMLAppLocationListElement>;
+            "app-location-register": LocalJSX.AppLocationRegister & JSXBase.HTMLAttributes<HTMLAppLocationRegisterElement>;
             "app-login": LocalJSX.AppLogin & JSXBase.HTMLAttributes<HTMLAppLoginElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
