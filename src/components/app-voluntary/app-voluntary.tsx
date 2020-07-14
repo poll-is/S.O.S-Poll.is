@@ -23,10 +23,15 @@ export class AppVoluntary {
             <h3>Cadastro de voluntário:</h3>
           </ion-text>
         </ion-item-divider>
-
-        <form>
-
-        </form>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-padding">
+              <p>Um texto explicativo aqui.</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+        <app-register></app-register>
 
       </ion-content>,
     ];
