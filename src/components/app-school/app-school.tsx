@@ -18,7 +18,7 @@ export class AppSchool {
       </ion-header>,
 
       <ion-content fullscreen>
-
+        <app-app-school-list></app-app-school-list>
       </ion-content>,
     ];
   }
