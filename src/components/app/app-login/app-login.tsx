@@ -51,7 +51,7 @@ export class AppLogin {
           </ion-col>
           <ion-col size="12" class="ion-text-center">
             <small>
-              <a href="/passwordrecovery">Perdeu a sua senha?</a>
+              <a href="/password-reset/">Perdeu a sua senha?</a>
             </small>
           </ion-col>
         </ion-row>

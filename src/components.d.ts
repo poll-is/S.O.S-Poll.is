@@ -24,6 +24,8 @@ export namespace Components {
     }
     interface AppMenu {
     }
+    interface AppPasswordReset {
+    }
     interface AppProfile {
         "name": string;
     }
@@ -99,6 +101,12 @@ declare global {
         prototype: HTMLAppMenuElement;
         new (): HTMLAppMenuElement;
     };
+    interface HTMLAppPasswordResetElement extends Components.AppPasswordReset, HTMLStencilElement {
+    }
+    var HTMLAppPasswordResetElement: {
+        prototype: HTMLAppPasswordResetElement;
+        new (): HTMLAppPasswordResetElement;
+    };
     interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
     }
     var HTMLAppProfileElement: {
@@ -163,6 +171,7 @@ declare global {
         "app-location-register": HTMLAppLocationRegisterElement;
         "app-login": HTMLAppLoginElement;
         "app-menu": HTMLAppMenuElement;
+        "app-password-reset": HTMLAppPasswordResetElement;
         "app-profile": HTMLAppProfileElement;
         "app-register": HTMLAppRegisterElement;
         "app-root": HTMLAppRootElement;
@@ -193,6 +202,8 @@ declare namespace LocalJSX {
     }
     interface AppMenu {
     }
+    interface AppPasswordReset {
+    }
     interface AppProfile {
         "name"?: string;
     }
@@ -222,6 +233,7 @@ declare namespace LocalJSX {
         "app-location-register": AppLocationRegister;
         "app-login": AppLogin;
         "app-menu": AppMenu;
+        "app-password-reset": AppPasswordReset;
         "app-profile": AppProfile;
         "app-register": AppRegister;
         "app-root": AppRoot;
@@ -246,6 +258,7 @@ declare module "@stencil/core" {
             "app-location-register": LocalJSX.AppLocationRegister & JSXBase.HTMLAttributes<HTMLAppLocationRegisterElement>;
             "app-login": LocalJSX.AppLogin & JSXBase.HTMLAttributes<HTMLAppLoginElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
+            "app-password-reset": LocalJSX.AppPasswordReset & JSXBase.HTMLAttributes<HTMLAppPasswordResetElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-register": LocalJSX.AppRegister & JSXBase.HTMLAttributes<HTMLAppRegisterElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
