@@ -14,7 +14,7 @@ export class AppRegister {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(`A: ${JSON.stringify(this.form_controls)}`);
+    console.log('A: ${JSON.stringify(this.form_controls)}');
   }
 
   changeFormValue(controlName, value) {
