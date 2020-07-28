@@ -17,5 +17,8 @@
   "devDependencies": {
     "@ionic/core": "^5.0.7",
     "@stencil/core": "^1.12.2"
+  },
+  "dependencies": {
+    "firebase": "^7.16.0"
   }
 }
