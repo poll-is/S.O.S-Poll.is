@@ -21,6 +21,7 @@ export class AppLogin {
     e.preventDefault();
     if (this.email != "" && this.password != "") {
       const user = await AuthService.registerUser(this.email, this.password);
+      await AuthService.sendVerificationEmail();
       console.log(user);
     }
   }
