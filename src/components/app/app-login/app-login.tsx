@@ -53,6 +53,7 @@ export class AppLogin {
                 name="email"
                 value={this.email}
                 onChange={(ev: any) => (this.email = ev.target.value)}
+                required
               ></ion-input>
             </ion-item>
           </ion-col>
@@ -65,6 +66,7 @@ export class AppLogin {
                 clearOnEdit={false}
                 value={this.password}
                 onChange={(ev: any) => (this.password = ev.target.value)}
+                required
               ></ion-input>
             </ion-item>
           </ion-col>

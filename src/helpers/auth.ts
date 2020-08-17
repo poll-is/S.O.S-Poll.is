@@ -60,6 +60,14 @@ class AuthController {
     }
   }
 
+  async sendResetLink(email: string): Promise<void> {
+    try {
+      return await firebase.auth().sendPasswordResetEmail(email);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async sendVerificationEmail(): Promise<void> {
     try {
       return await firebase.auth().currentUser.sendEmailVerification();
