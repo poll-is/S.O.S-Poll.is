@@ -1,10 +1,11 @@
-import { Component, h } from '@stencil/core';
+import { Component, h } from "@stencil/core";
 
 @Component({
-  tag: 'app-menu',
-  styleUrl: 'app-menu.css'
+  tag: "app-menu",
+  styleUrl: "app-menu.css",
 })
 export class AppMenu {
+  profile: string = "teste";
 
   render() {
     return [
@@ -16,7 +17,7 @@ export class AppMenu {
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-item href="/profile/:name">Meu perfil</ion-item>
+            <ion-item href={`/profile/${this.profile}`}>Meu perfil</ion-item>
             <ion-item href="/my-school">Minhas escolas</ion-item>
             <ion-item href="/my-device">Meus equipamentos</ion-item>
             <ion-item href="/my-contribution">Minhas contribuições</ion-item>
