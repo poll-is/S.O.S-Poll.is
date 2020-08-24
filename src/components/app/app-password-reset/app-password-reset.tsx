@@ -36,7 +36,12 @@ export class AppPasswordReset {
         </ion-row>
         <ion-row>
           <ion-col size="8" offset="2">
-            <ion-button href="#" color="primary" expand="block">
+            <ion-button
+              href="#"
+              color="primary"
+              expand="block"
+              onClick={this.sendResetLink.bind(this)}
+            >
               Solicitar nova senha
             </ion-button>
           </ion-col>

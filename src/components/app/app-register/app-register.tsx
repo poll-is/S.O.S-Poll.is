@@ -1,10 +1,12 @@
 import { Component, State, h } from "@stencil/core";
+import { AuthService } from "../../../helpers/auth";
 
 @Component({
   tag: "app-register",
   styleUrl: "app-register.css",
 })
 export class AppRegister {
+  @State() password: string;
   @State() form_controls = {
     profile: null,
     first_name: null,
@@ -25,6 +27,28 @@ export class AppRegister {
       ...this.form_controls,
       [controlName]: value,
     };
+  }
+
+  async registerUser(e) {
+    e.preventDefault();
+    if (this.form_controls.email != "" && this.password != "") {
+      const user = await AuthService.registerUser(
+        this.form_controls.email,
+        this.password
+      );
+      await AuthService.sendVerificationEmail();
+      console.log(user);
+    }
+  }
+
+  async loginWithGoogle() {
+    const user = await AuthService.loginWithGoogle();
+    console.log(user);
+  }
+
+  async loginWithFacebook() {
+    const user = await AuthService.loginWithFacebook();
+    console.log(user);
   }
 
   render() {
@@ -165,13 +189,25 @@ export class AppRegister {
               <ion-label position="floating">
                 Senha: <ion-text color="danger">*</ion-text>
               </ion-label>
-              <ion-input type="password" name="password" required></ion-input>
+              <ion-input
+                type="password"
+                name="password"
+                clearOnEdit={false}
+                value={this.password}
+                onChange={(ev: any) => (this.password = ev.target.value)}
+                required
+              ></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col size="8" offset="2">
-            <ion-button href="#" color="primary" expand="block">
+            <ion-button
+              href="#"
+              color="primary"
+              onClick={this.registerUser.bind(this)}
+              expand="block"
+            >
               Criar conta
             </ion-button>
           </ion-col>
@@ -182,12 +218,22 @@ export class AppRegister {
             <p>Ou entre com a sua conta</p>
           </ion-col>
           <ion-col size="12">
-            <ion-button href="#" color="primary" expand="block">
+            <ion-button
+              href="#"
+              color="primary"
+              onClick={() => this.loginWithFacebook()}
+              expand="block"
+            >
               Facebook
             </ion-button>
           </ion-col>
           <ion-col size="12">
-            <ion-button href="#" color="bt-google" expand="block">
+            <ion-button
+              href="#"
+              color="bt-google"
+              onClick={() => this.loginWithGoogle()}
+              expand="block"
+            >
               Google
             </ion-button>
           </ion-col>
