@@ -1,11 +1,10 @@
-import { Component, h } from '@stencil/core';
+import { Component, h } from "@stencil/core";
 
 @Component({
-  tag: 'app-root',
-  styleUrl: 'app-root.css'
+  tag: "app-root",
+  styleUrl: "app-root.css",
 })
 export class AppRoot {
-
   render() {
     return (
       <ion-app>
@@ -13,7 +12,7 @@ export class AppRoot {
           <ion-route url="/" component="page-home" />
           <ion-route url="/login/" component="app-login" />
           <ion-route url="/register/" component="app-register" />
-          <ion-route url="/profile/:name" component="app-profile" />
+          <ion-route url="/profile/" component="app-profile" />
           <ion-route url="/donor/" component="app-donor" />
           <ion-route url="/school/" component="app-school" />
           <ion-route url="/student/" component="app-student" />

@@ -5,7 +5,10 @@ import { Component, h } from "@stencil/core";
   styleUrl: "app-menu.css",
 })
 export class AppMenu {
-  profile: string = "teste";
+  getData(): string {
+    let data = JSON.parse(window.localStorage.getItem("user_data"));
+    return data.name;
+  }
 
   render() {
     return [
@@ -17,7 +20,7 @@ export class AppMenu {
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-item href={`/profile/${this.profile}`}>Meu perfil</ion-item>
+            <ion-item href="/profile">Meu perfil</ion-item>
             <ion-item href="/my-school">Minhas escolas</ion-item>
             <ion-item href="/my-device">Meus equipamentos</ion-item>
             <ion-item href="/my-contribution">Minhas contribuições</ion-item>

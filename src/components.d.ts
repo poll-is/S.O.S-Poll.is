@@ -27,7 +27,6 @@ export namespace Components {
     interface AppPasswordReset {
     }
     interface AppProfile {
-        "name": string;
     }
     interface AppRegister {
     }
@@ -205,7 +204,6 @@ declare namespace LocalJSX {
     interface AppPasswordReset {
     }
     interface AppProfile {
-        "name"?: string;
     }
     interface AppRegister {
     }

@@ -29,6 +29,13 @@ export class AppRegister {
     };
   }
 
+  storeDataLocally(data) {
+    console.log("storeDataLocally");
+    window.localStorage.removeItem("user_data");
+    window.localStorage.setItem("user_data", JSON.stringify(data));
+    console.log(data);
+  }
+
   async registerUser(e) {
     e.preventDefault();
     if (this.form_controls.email != "" && this.password != "") {
@@ -37,17 +44,20 @@ export class AppRegister {
         this.password
       );
       await AuthService.sendVerificationEmail();
+      this.storeDataLocally(this.form_controls);
       console.log(user);
     }
   }
 
   async loginWithGoogle() {
     const user = await AuthService.loginWithGoogle();
+    this.storeDataLocally(this.form_controls);
     console.log(user);
   }
 
   async loginWithFacebook() {
     const user = await AuthService.loginWithFacebook();
+    this.storeDataLocally(this.form_controls);
     console.log(user);
   }
 

@@ -1,23 +1,30 @@
-import { Component, Prop, State, h } from '@stencil/core';
-import { sayHello } from '../../helpers/utils';
+import { Component, State, h } from "@stencil/core";
+import { sayHello } from "../../helpers/utils";
 
 @Component({
-  tag: 'app-profile',
-  styleUrl: 'app-profile.css'
+  tag: "app-profile",
+  styleUrl: "app-profile.css",
 })
 export class AppProfile {
-
   @State() state = false;
-  @Prop() name: string;
+
+  getData() {
+    return JSON.parse(window.localStorage.getItem("user_data"));
+  }
 
   formattedName(): string {
-    if (this.name) {
-      return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase();
+    let data = this.getData();
+    if (data?.first_name) {
+      console.log(data);
+      return data.first_name + " " + data.last_name;
     }
-    return '';
+    return "";
   }
 
   render() {
+    if (!this.getData()?.first_name) {
+      return "No data!";
+    }
     return [
       <ion-header>
         <ion-toolbar color="primary">
@@ -37,10 +44,10 @@ export class AppProfile {
           <ion-label>Setting ({this.state.toString()})</ion-label>
           <ion-toggle
             checked={this.state}
-            onIonChange={ev => (this.state = ev.detail.checked)}
+            onIonChange={(ev) => (this.state = ev.detail.checked)}
           />
         </ion-item>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }
