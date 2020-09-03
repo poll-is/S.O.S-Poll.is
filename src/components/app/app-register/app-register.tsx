@@ -1,5 +1,6 @@
 import { Component, State, h } from "@stencil/core";
 import { AuthService } from "../../../helpers/auth";
+import { DatabaseService } from "../../../helpers/database";
 
 @Component({
   tag: "app-register",
@@ -45,7 +46,8 @@ export class AppRegister {
       );
       await AuthService.sendVerificationEmail();
       this.storeDataLocally(this.form_controls);
-      console.log(user);
+      const db = await DatabaseService.getEntries();
+      console.log(db);
     }
   }
 
